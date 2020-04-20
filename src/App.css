@@ -1,38 +1,159 @@
-.App {
+body {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1200px;
+  overflow-y: scroll;
+  font-family: 'Open Sans',sans-serif;
+  font-weight: 400;
+  color: #777;
+  background-color: #f7f7f7;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+.main {
+  padding: 15px;
+  overflow: hidden;
+  background-color: #e7e7e7;
+  background-color: rgba(0,0,0,0.06);
+}
+
+h1 {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #d8d8d8;
+  font-weight: 600;
+}
+
+h1 span {font-family: monospace,serif;}
+
+h3 {
+padding-bottom: 20px;
+  box-shadow: 0 1px 0 rgba(0,0,0,.1) ,0 2px 0 rgba(255,255,255,.9);
+}
+
+p {
+  margin: 0;
+  padding: 10px 0;
+  color: #777;
+}
+
+.clear {clear:both;}
+
+/* -----------------------------------------
+=CSS3 Loading animations
+-------------------------------------------- */
+
+/* =Elements style
+---------------------- */
+.load-wrapper {
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin: 0 10px 10px 0;
+  padding: 20px 20px 20px;
+  border-radius: 5px;
   text-align: center;
+  background-color: #d8d8d8;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.load-wrapper p {padding: 0 0 20px;}
+.load-wrapper:last-child {margin-right: 0;}
+
+.line  {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  margin-right: 4px;;
+  background-color: #4b9cdb;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.line:last-child {
+  margin-right: 0;
+  /* transform: translate(0, 15px); */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.ring {
+  width: 10px;
+  height: 10px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 7px dashed #4b9cdb;
+  border-radius: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+/* Spinner */
+.spinner {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  margin: 0 auto;
+  border: 4px solid #4b9cdb;
+  border-radius: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ball-holder {
+  position: absolute;
+  width: 12px;
+  height: 45px;
+  left: 16px;
+  top: 0px;
+}
+
+.ball {
+  position: absolute;
+  top: -11px;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background: #4282B3;
+}
+
+/* Spinner end */
+
+.letter-holder {padding: 16px;}
+
+.letter {
+    float: left;
+    font-size: 14px;
+    color: #777;
+}
+
+.square {
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+  background-color: #4b9cdb;
+}
+
+.spinner {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  margin: 0 auto;
+}
+
+.bubble-1,
+.bubble-2 {
+  position: absolute;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background-color: #4b9cdb;
+}
+
+.bubble-2 {
+  top: auto;
+  bottom: 0;
+}
+
+.bar {
+  float: left;
+  width: 15px;
+  height: 6px;
+  border-radius: 2px;
+  background-color: #4b9cdb;
 }
